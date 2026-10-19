@@ -27,6 +27,11 @@ print(ventas.head())
 print('Venta promedio general por sucursal:')
 print(ventas['ventas'].mean())
 
+# Ticket Promedio (ventas totales / clientes totales)
+ticket_promedio = ventas['ventas'].sum() / ventas['clientes'].sum()
+print('Ticket promedio (ventas totales / clientes totales):')
+print(ticket_promedio)
+
 # Sucursal con mayor venta:
 print(' Sucursal con mayor venta: ' )
 print(ventas.loc[ventas['ventas'].idxmax(), "sucursal"])
